@@ -1,12 +1,15 @@
 %define _use_internal_dependency_generator 0
 %define __find_requires %{_builddir}/find-requires
+%global debug_package %{nil}
+
 Summary: Slurm SPANK plugin for job private tmpdir
 Name: slurm-spank-private-tmpdir
 Version: 0.0.2
 Release: 1
 License: GPL
 Group: System Environment/Base
-Source0: %{name}-%{version}.tar.gz
+URL: https://github.com/juanlufont/spank-private-tmp
+Source0: https://github.com/juanlufont/spank-private-tmp/archive/refs/tags/%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: slurm-devel
 Requires: slurm
@@ -16,7 +19,7 @@ Slurm SPANK plugin that uses file system namespaces to create private
 temporary directories for each job.
 
 %prep
-%setup -q
+%setup -n spank-private-tmp-%{version} -q
 # Dummy file used to get a RPM dependency on libslurm.so
 echo 'int main(){}' > %{_builddir}/libslurm_dummy.c
 cat <<EOF > %{_builddir}/find-requires
