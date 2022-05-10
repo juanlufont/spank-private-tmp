@@ -1,6 +1,5 @@
 %define _use_internal_dependency_generator 0
 %define __find_requires %{_builddir}/find-requires
-%global debug_package %{nil}
 
 Summary: Slurm SPANK plugin for job private tmpdir
 Name: slurm-spank-private-tmpdir
