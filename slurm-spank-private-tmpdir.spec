@@ -1,10 +1,11 @@
 %define _use_internal_dependency_generator 0
 %define __find_requires %{_builddir}/find-requires
+%define _slurm slurm.21.08.8
 
 Summary: Slurm SPANK plugin for job private tmpdir
 Name: slurm-spank-private-tmpdir
 Version: 0.0.2
-Release: 1
+Release: %{_slurm}
 License: GPL
 Group: System Environment/Base
 URL: https://github.com/juanlufont/spank-private-tmp
