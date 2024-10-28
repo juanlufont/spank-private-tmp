@@ -4,7 +4,7 @@
 Summary: Slurm SPANK plugin for job private tmpdir
 Name: slurm-spank-private-tmpdir
 Version: 0.0.2
-Release: 1b%{?_slurm}
+Release: 1b%{?_slurm}-1.%{dist}
 License: GPL
 Group: System Environment/Base
 URL: https://github.com/juanlufont/spank-private-tmp
